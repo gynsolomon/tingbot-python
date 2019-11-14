@@ -3,7 +3,7 @@ from ..utils import only_call_once
 
 def fixup_env():
     import evdev
-    os.environ["SDL_FBDEV"] = "/dev/fb1"
+    os.environ["SDL_FBDEV"] = "/dev/fb0"
 
     mouse_path = None
 

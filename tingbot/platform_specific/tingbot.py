@@ -37,8 +37,8 @@ def register_button_callback(callback):
     ensure_button_setup()
     button_callback = callback
 
-button_pins = (17, 23, 24, 14)
-
+# button_pins = (17, 23, 24, 14) //tingbot origin
+button_pins = (25, 23, 24) 
 @only_call_once
 def ensure_wiringpi_setup():
     import wiringpi
@@ -54,8 +54,8 @@ def ensure_button_setup():
         wiringpi.pinMode(button_pin, wiringpi.INPUT)
         wiringpi.wiringPiISR(button_pin, wiringpi.INT_EDGE_BOTH, GPIO_callback)
 
-button_previous_states = [0, 0, 0, 0]
-
+# button_previous_states = [0, 0, 0, 0] //tingbot origin
+button_previous_states = [0, 0, 0]
 def GPIO_callback():
     import wiringpi
     global button_previous_states

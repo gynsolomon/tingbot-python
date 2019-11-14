@@ -133,11 +133,15 @@ class combo(object):
             self.func()
                 
 
-# create buttons
-button_names = ('left', 'midleft', 'midright', 'right')
-buttons = {x: Button() for x in button_names}
-left_button, midleft_button, midright_button, right_button = [buttons[x] for x in button_names]
+# # create buttons //tingbot origin
+# button_names = ('left', 'midleft', 'midright', 'right')
+# buttons = {x: Button() for x in button_names}
+# left_button, midleft_button, midright_button, right_button = [buttons[x] for x in button_names]
 
+# create buttons
+button_names = ('k1', 'k2', 'k3')
+buttons = {x: Button() for x in button_names}
+left_button, mid_button, right_button = [buttons[x] for x in button_names]
 
 is_setup = False
 
